@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:992e75ec7201d3208220255d236c71397dc2135c8f9111ebf617b59c5d269e61
-size 64
+name = "beautifulsoup4==4.6.3"
+name = "bs4==0.0.1"
+name = "requests==2.21.0"
+name = "pandas==0.25.3"
