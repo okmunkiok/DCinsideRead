@@ -1,0 +1,9 @@
+README.md
+setup.py
+TwitterIsWasteOfTime.egg-info/PKG-INFO
+TwitterIsWasteOfTime.egg-info/SOURCES.txt
+TwitterIsWasteOfTime.egg-info/dependency_links.txt
+TwitterIsWasteOfTime.egg-info/top_level.txt
+dcinside/__init__.py
+dcinside/common.py
+dcinside/dcinside.py
