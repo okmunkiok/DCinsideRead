@@ -1,8 +1,3 @@
-# Twitter_is_waste_of_time
-커뮤니티들을 크롤링하는 패키지입니다
-
-현재 디시인사이드만 구현되어 있습니다
-
-추후 설명 문서를 첨부하겠습니다
-
-감사합니다
+version https://git-lfs.github.com/spec/v1
+oid sha256:cb9a27bd6581d7910bafa242104bec6f5ccd3102abcced9737783a419ee350a7
+size 209

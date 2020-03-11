@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: Twitter-is-waste-of-time
+Version: 1.0.0
+Summary: 커뮤니티들을 크롤링합니다
+Home-page: https://github.com/FreelyReceivedFreelyGive/Twitter_is_waste_of_time.git
+Author: Carl Jellinek
+Author-email: car1jellinek@gmail.com
+License: GNU General Public License v3.0
+Description: # Twitter_is_waste_of_time
+        커뮤니티들을 크롤링하는 패키지입니다
+        
+        현재 디시인사이드만 구현되어 있습니다
+        
+        추후 설명 문서를 첨부하겠습니다
+        
+        감사합니다
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
