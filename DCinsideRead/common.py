@@ -112,5 +112,5 @@ def urllib_request_Request(url):
     except:
         print("error on function wlt.common.urllib_request_Request()")
 
-# if __name__ == "__main__":
-#     pass
+if __name__ == "__main__":
+    pass

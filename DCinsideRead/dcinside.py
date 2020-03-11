@@ -330,5 +330,5 @@ def read_lists_of_posts_and_save_it_to_csv(page_and_base_url_dictionary):
     except:
         print("error on function wlt.dcinside.read_lists_of_posts_and_save_it_to_csv()")
 
-# if __name__ == "__main__":
-#     pass
+if __name__ == "__main__":
+    pass
