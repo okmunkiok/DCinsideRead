@@ -1,0 +1,9 @@
+README.md
+setup.py
+DCinsideRead/__init__.py
+DCinsideRead/common.py
+DCinsideRead/dcinside.py
+DCinsideRead.egg-info/PKG-INFO
+DCinsideRead.egg-info/SOURCES.txt
+DCinsideRead.egg-info/dependency_links.txt
+DCinsideRead.egg-info/top_level.txt

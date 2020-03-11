@@ -1,7 +1,7 @@
 Metadata-Version: 1.1
-Name: TwitterIsWasteOfTime
-Version: 1.0.3
-Summary: 커뮤니티들을 크롤링합니다
+Name: DCinsideRead
+Version: 1.0.0
+Summary: 디시인사이드를 비롯한 커뮤니티들을 크롤링합니다
 Home-page: https://github.com/FreelyReceivedFreelyGive/TwitterIsWasteOfTime.git
 Author: Carl Jellinek
 Author-email: car1jellinek@gmail.com
@@ -13,6 +13,7 @@ Description: 커뮤니티들을 크롤링합니다
         설명 문서를 최대한 빨리 첨부하도록 노력하겠습니다
         
         감사합니다
+Keywords: 디씨인사이드,디시인사이드,디시인사이드 갤러리,디씨인사이드 갤러리,DCinside,dcinside,DC,dc,gallery,김유식,유식,횡령,갤,갤질,개죽이
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
