@@ -39,90 +39,90 @@ import pandas as pd
 
 
 
-# 
-def update_gallery_url_dictionary(url_info_dictionary):
-    try:
-        req = common.requests_get(url_info_dictionary["gallery_list_url"])
-        pattern = re.compile(url_info_dictionary["gallery_tag_regular_expression"])
-        match_list = re.findall(pattern, req.text)
-        tag_list = []
-        for match_one in match_list:
-            i = re.sub("[\n\t\r<\"]", "", match_one)
-            temp_list = []
-            temp = re.split("[\s*]", " ".join(i.split()))
-            # <a  href="http://gall.dcinside.com/mgallery/board/lists/?id=lovelyviolin"
-            # 위의 split은 a와 href 사이의 여러 공백을 1개로 만들어 주지만, 이하 다른 부분들에서 공백이 생기면 문제가 된다
-            # 아직은 그렇게 되어 있지 않으니 (내가 지금 문법을 숙지하지 못해서 그런데, 문법상 아예 발생하지 않는 경우일 수도 있음), 그건 나중에 문제가 되면 해결하자
-            temp_list.append(temp[0])
-            temp_list.append(re.split("=", temp[1], 1))
-            tag_list.append(temp_list)
-        req = common.urllib_request_Request(url_info_dictionary["gallery_list_url"])
-        html = urllib.request.urlopen(req)
-        bs = BeautifulSoup(html, "html.parser")
-        gallery_url_dictionary = {}
-        # for i in range(10): # for fast test
-        for i in range(len(tag_list)):
-            gallery_url_dictionary[len(gallery_url_dictionary)] = {
-                "gallery_name": bs.find(tag_list[i][0], {tag_list[i][1][0]: tag_list[i][1][1].replace("\"", "")}).text,
-                "gallery_url": tag_list[i][1][1].replace("\"", "")
-            }
-        return gallery_url_dictionary
-    except:
-        print("error on function wlt.dcinside.update_gallery_url_dictionary()")
 
-def get_gallery_url_dictionary(*update_or_not):
-    try:
-        if len(update_or_not) == 0:
-            update_or_not = False
-        else:
-            update_or_not = update_or_not[0]
-        gallery_url_info = {
-            "gallery_list_url": "https://gall.dcinside.com/",
-            "gallery_url_regular_expression": r"https?:\/\/gall.dcinside.com\/board\/lists\/\?id=\w*",
-            "gallery_tag_regular_expression": r"\<\w*\s*\w*\s*\=\s*\"https?:\/\/gall.dcinside.com\/board\/lists\/\?id=\w*\""
-            }
+# def update_gallery_url_dictionary(url_info_dictionary):
+#     try:
+#         req = common.requests_get(url_info_dictionary["gallery_list_url"])
+#         pattern = re.compile(url_info_dictionary["gallery_tag_regular_expression"])
+#         match_list = re.findall(pattern, req.text)
+#         tag_list = []
+#         for match_one in match_list:
+#             i = re.sub("[\n\t\r<\"]", "", match_one)
+#             temp_list = []
+#             temp = re.split("[\s*]", " ".join(i.split()))
+#             # <a  href="http://gall.dcinside.com/mgallery/board/lists/?id=lovelyviolin"
+#             # 위의 split은 a와 href 사이의 여러 공백을 1개로 만들어 주지만, 이하 다른 부분들에서 공백이 생기면 문제가 된다
+#             # 아직은 그렇게 되어 있지 않으니 (내가 지금 문법을 숙지하지 못해서 그런데, 문법상 아예 발생하지 않는 경우일 수도 있음), 그건 나중에 문제가 되면 해결하자
+#             temp_list.append(temp[0])
+#             temp_list.append(re.split("=", temp[1], 1))
+#             tag_list.append(temp_list)
+#         req = common.urllib_request_Request(url_info_dictionary["gallery_list_url"])
+#         html = urllib.request.urlopen(req)
+#         bs = BeautifulSoup(html, "html.parser")
+#         gallery_url_dictionary = {}
+#         # for i in range(10): # for fast test
+#         for i in range(len(tag_list)):
+#             gallery_url_dictionary[len(gallery_url_dictionary)] = {
+#                 "gallery_name": bs.find(tag_list[i][0], {tag_list[i][1][0]: tag_list[i][1][1].replace("\"", "")}).text,
+#                 "gallery_url": tag_list[i][1][1].replace("\"", "")
+#             }
+#         return gallery_url_dictionary
+#     except:
+#         print("error on function wlt.dcinside.update_gallery_url_dictionary()")
+
+# def get_gallery_url_dictionary(*update_or_not):
+#     try:
+#         if len(update_or_not) == 0:
+#             update_or_not = False
+#         else:
+#             update_or_not = update_or_not[0]
+#         gallery_url_info = {
+#             "gallery_list_url": "https://gall.dcinside.com/",
+#             "gallery_url_regular_expression": r"https?:\/\/gall.dcinside.com\/board\/lists\/\?id=\w*",
+#             "gallery_tag_regular_expression": r"\<\w*\s*\w*\s*\=\s*\"https?:\/\/gall.dcinside.com\/board\/lists\/\?id=\w*\""
+#             }
         
-        minor_gallery_url_info = {
-            "gallery_list_url": "https://gall.dcinside.com/m",
-            "gallery_url_regular_expression": r"https?:\/\/gall.dcinside.com\/mgallery\/board\/lists\/\?id=\w*",
-            "gallery_tag_regular_expression": r"\<\w*\s*\w*\s*\=\s*\"https?:\/\/gall.dcinside.com\/mgallery\/board\/lists\/\?id=\w*\""
-        }
-        community_name = "dcinside"
-        gallery_url_list_csv_file_name_format ={
-                "head": "gallery_url_dictionary_made_",
-                "tail": ".csv"
-            }
-        directory_info_dictionary = common.check_and_make_data_directories(community_name)
-        csv_file_name = gallery_url_list_csv_file_name_format["head"] + gallery_url_list_csv_file_name_format["tail"]
-        csv_file_path_and_name = directory_info_dictionary["url_list_path"] + csv_file_name
-        try:
-            does_list_csv_exist_or_not = False
-            does_list_csv_path_exist_or_not = False
-            list_for_checking_url_list_csv_exists = os.listdir(directory_info_dictionary["url_list_path"])
-            does_list_csv_path_exist_or_not = True
-            for element in list_for_checking_url_list_csv_exists:
-                if csv_file_name == element:
-                    does_list_csv_exist_or_not = True
-                    break
-        except:
-            csv_file_path_and_name = update_gallery_url_dictionary()
-            does_list_csv_path_exist_or_not = False
-        if update_or_not == True or does_list_csv_path_exist_or_not == False or does_list_csv_exist_or_not == False:
-            gallery_url_dictionary = update_gallery_url_dictionary(gallery_url_info)
-            df1 = pd.DataFrame(gallery_url_dictionary).transpose()
-            minor_gallery_url_dictionary = update_gallery_url_dictionary(minor_gallery_url_info)
-            # 마이너 갤러리 순위권에 있는 애들은 글씨에 색이 입혀져 있어서 기존 regular expression으로 포섭이 되지 않음
-            # ex. 중세게임 마이너 갤러리 등
-            # 나중에 처리하겠음. 일단은 패스
-            df2 = pd.DataFrame(minor_gallery_url_dictionary).transpose()
-            df = df1.append(df2, ignore_index = True)
-            df = df.drop_duplicates(subset = [list(gallery_url_dictionary[0].keys())[0]], keep = "first").reset_index(drop = True)
-            df.to_csv(csv_file_path_and_name)
-        df = pd.read_csv(csv_file_path_and_name, index_col = 0)
-        gallery_url_dictionary = df.set_index("gallery_name")["gallery_url"].to_dict()
-        return gallery_url_dictionary
-    except:
-        print("error on function wlt.dcinside.get_gallery_url_dictionary()")
+#         minor_gallery_url_info = {
+#             "gallery_list_url": "https://gall.dcinside.com/m",
+#             "gallery_url_regular_expression": r"https?:\/\/gall.dcinside.com\/mgallery\/board\/lists\/\?id=\w*",
+#             "gallery_tag_regular_expression": r"\<\w*\s*\w*\s*\=\s*\"https?:\/\/gall.dcinside.com\/mgallery\/board\/lists\/\?id=\w*\""
+#         }
+#         community_name = "dcinside"
+#         gallery_url_list_csv_file_name_format ={
+#                 "head": "gallery_url_dictionary_made_",
+#                 "tail": ".csv"
+#             }
+#         directory_info_dictionary = common.check_and_make_data_directories(community_name)
+#         csv_file_name = gallery_url_list_csv_file_name_format["head"] + gallery_url_list_csv_file_name_format["tail"]
+#         csv_file_path_and_name = directory_info_dictionary["url_list_path"] + csv_file_name
+#         try:
+#             does_list_csv_exist_or_not = False
+#             does_list_csv_path_exist_or_not = False
+#             list_for_checking_url_list_csv_exists = os.listdir(directory_info_dictionary["url_list_path"])
+#             does_list_csv_path_exist_or_not = True
+#             for element in list_for_checking_url_list_csv_exists:
+#                 if csv_file_name == element:
+#                     does_list_csv_exist_or_not = True
+#                     break
+#         except:
+#             csv_file_path_and_name = update_gallery_url_dictionary()
+#             does_list_csv_path_exist_or_not = False
+#         if update_or_not == True or does_list_csv_path_exist_or_not == False or does_list_csv_exist_or_not == False:
+#             gallery_url_dictionary = update_gallery_url_dictionary(gallery_url_info)
+#             df1 = pd.DataFrame(gallery_url_dictionary).transpose()
+#             minor_gallery_url_dictionary = update_gallery_url_dictionary(minor_gallery_url_info)
+#             # 마이너 갤러리 순위권에 있는 애들은 글씨에 색이 입혀져 있어서 기존 regular expression으로 포섭이 되지 않음
+#             # ex. 중세게임 마이너 갤러리 등
+#             # 나중에 처리하겠음. 일단은 패스
+#             df2 = pd.DataFrame(minor_gallery_url_dictionary).transpose()
+#             df = df1.append(df2, ignore_index = True)
+#             df = df.drop_duplicates(subset = [list(gallery_url_dictionary[0].keys())[0]], keep = "first").reset_index(drop = True)
+#             df.to_csv(csv_file_path_and_name)
+#         df = pd.read_csv(csv_file_path_and_name, index_col = 0)
+#         gallery_url_dictionary = df.set_index("gallery_name")["gallery_url"].to_dict()
+#         return gallery_url_dictionary
+#     except:
+#         print("error on function wlt.dcinside.get_gallery_url_dictionary()")
 
 def request_and_get_bs_objects(url):
     try:
