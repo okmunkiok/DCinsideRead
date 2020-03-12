@@ -1,11 +1,14 @@
-Metadata-Version: 1.1
+Metadata-Version: 1.2
 Name: DCinsideRead
-Version: 1.0.0
+Version: 1.0.3
 Summary: 디시인사이드를 비롯한 커뮤니티들을 크롤링합니다
-Home-page: https://github.com/FreelyReceivedFreelyGive/TwitterIsWasteOfTime.git
+Home-page: https://github.com/FreelyReceivedFreelyGive/DCinsideRead
 Author: Carl Jellinek
 Author-email: car1jellinek@gmail.com
-License: GNU General Public License v3.0
+License: GPLv3+
+Project-URL: Documentation, https://freelyreceivedfreelygive.gitbook.io/dcinsideread/
+Project-URL: Source Code, https://github.com/FreelyReceivedFreelyGive/DCinsideRead
+Project-URL: Bug Tracker, https://github.com/FreelyReceivedFreelyGive/DCinsideRead/issues
 Description: 커뮤니티들을 크롤링합니다
         
         지금은 디시인사이드만 구현 중입니다
@@ -13,8 +16,12 @@ Description: 커뮤니티들을 크롤링합니다
         설명 문서를 최대한 빨리 첨부하도록 노력하겠습니다
         
         감사합니다
+        
 Keywords: 디씨인사이드,디시인사이드,디시인사이드 갤러리,디씨인사이드 갤러리,DCinside,dcinside,DC,dc,gallery,김유식,유식,횡령,갤,갤질,개죽이
 Platform: UNKNOWN
-Classifier: Programming Language :: Python :: 3
-Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
 Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Information Technology
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7.4
