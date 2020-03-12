@@ -39,7 +39,7 @@ import pandas as pd
 
 
 
-
+# 
 def update_gallery_url_dictionary(url_info_dictionary):
     try:
         req = common.requests_get(url_info_dictionary["gallery_list_url"])
