@@ -7,6 +7,8 @@ import requests
 import urllib.request
 from bs4 import BeautifulSoup
 import re
+import pandas as pd
+import numpy as np
 
 request_iterate_limit = 1000
 
@@ -41,51 +43,47 @@ def get_fake_header(header_length_max = 10):
 # def get_directories_dictionary(community_name):
 def get_directories_dictionary(community_name = "dcinside"):
     try:
-        directory_info_dictionary = {
-            "url_list_path": os.getcwd() + "/data/" + community_name + "/"
+        directories_dictionary = {
+            "url_list_path": os.getcwd() + "/data/" + str(community_name) + "/"
         }
-        directory_info_dictionary["temp_raw_data_path"] = directory_info_dictionary["url_list_path"] + "temp_raw_data/"
-        directory_info_dictionary["merged_data_path"] = directory_info_dictionary["url_list_path"] + "merged_data/"
-        return directory_info_dictionary
+        directories_dictionary["temp_raw_data_path"] = directories_dictionary["url_list_path"] + "temp_raw_data/"
+        directories_dictionary["merged_data_path"] = directories_dictionary["url_list_path"] + "merged_data/"
+        return directories_dictionary
     except:
         print_error(inspect.currentframe())
 
 # def check_and_make_data_directories(community_name):
 def check_and_make_data_directories(community_name = "dcinside"):
     try:
-        directory_info_dictionary = get_directories_dictionary(community_name)
-        for path in list(directory_info_dictionary.values()):
+        directories_dictionary = get_directories_dictionary(community_name)
+        for path in list(directories_dictionary.values()):
             if os.path.exists(path) == False:
                 os.makedirs(path)
-        return directory_info_dictionary
+        return directories_dictionary
     except:
         print_error(inspect.currentframe())
 
-def delete_all_legacy_data(community_name = "dcinside", delete_raw_data = True, delete_merged_data = False):
+def delete_all_legacy_data(community_name = "dcinside", delete_leagacy_temp_raw_data = False, delete_legacy_merged_data = False, file_header = ""):
     try:
-        if delete_raw_data == True:
-            directory_info_dictionary = get_directories_dictionary(community_name)
-            for path in list(directory_info_dictionary.values()):
-                if path == directory_info_dictionary["temp_raw_data_path"]:
+        if delete_leagacy_temp_raw_data == True:
+            directories_dictionary = get_directories_dictionary(community_name)
+            for path in list(directories_dictionary.values()):
+                if path == directories_dictionary["temp_raw_data_path"]:
                     if os.path.exists(path):
                         for file in os.scandir(path):
-                            try:
+                            if file_header in file.path:
                                 os.remove(file.path)
-                            except:
-                                continue
                     break
-
-        if delete_merged_data == True:
-            directory_info_dictionary = get_directories_dictionary(community_name)
-            for path in list(directory_info_dictionary.values()):
-                if path == directory_info_dictionary["merged_data_path"]:
+        if delete_legacy_merged_data == True:
+            directories_dictionary = get_directories_dictionary(community_name)
+            for path in list(directories_dictionary.values()):
+                if path == directories_dictionary["merged_data_path"]:
                     if os.path.exists(path):
                         for file in os.scandir(path):
-                            try:
+                            if file_header in file.path:
                                 os.remove(file.path)
-                            except:
-                                continue
                     break
+        return
     except:
         print_error(inspect.currentframe())
 
@@ -133,6 +131,22 @@ def replace_several(text, to_be_replaced_list, substitute):
         for to_be_replaced in to_be_replaced_list:
             text = text.replace(to_be_replaced, substitute)
         return text
+    except:
+        print_error(inspect.currentframe())
+
+def get_tuple_list_from_dictionary_to(column_data_type_dictionary):
+    try:
+        data_types_tuple_list = []
+        for key in column_data_type_dictionary:
+            data_types_tuple_list.append((key, column_data_type_dictionary[key]))
+        return data_types_tuple_list
+    except:
+        print_error(inspect.currentframe())
+
+def create_empty_dataframe_with_column_data_types_dictionary(column_data_type_dictionary):
+    try:
+        temp_ndarray = np.empty(0, dtype = get_tuple_list_from_dictionary_to(column_data_type_dictionary))
+        return pd.DataFrame(temp_ndarray)
     except:
         print_error(inspect.currentframe())
 
