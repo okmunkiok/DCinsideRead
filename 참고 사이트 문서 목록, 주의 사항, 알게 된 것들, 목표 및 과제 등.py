@@ -208,6 +208,54 @@
 # https://stackoverflow.com/questions/4813061/non-alphanumeric-list-order-from-os-listdir
 # sort reverse list
 # https://stackoverflow.com/questions/5846004/unable-to-reverse-lists-in-python-getting-nonetype-as-list
+# floating number point format
+# https://stackoverflow.com/questions/455612/limiting-floats-to-two-decimal-points
+# declare empty dataframe with dtypes 와 이건 진짜 crazy idea 완전 대박 창의력 대장 씽크빅 만렙
+# https://stackoverflow.com/questions/36462257/create-empty-dataframe-in-pandas-specifying-column-types
+# 댓글이 find에 잡히지 않는데, 무슨 동적 기법 등을 사용한 건가? 그에 대한 대책 중 하나로 보이는 것
+# 야 이게 정답이다 selenium으로 driver 돌려야 된다. 댓글은 동적 기법으로만 풀린다
+# 여기 코드는 Firefox 했는데 Chrome으로 고쳐서 써도 상관 없을 듯. 성능 같은 걸 비교해서 나중에 최종 판단하자
+# https://stackoverflow.com/questions/51529482/beautiful-soup-find-returns-none
+# selenium webdriver chrome vs firefox Gecko
+# https://ultimateqa.com/chrome-vs-firefox/
+# https://stackoverflow.com/questions/53603429/chromedriver-is-too-slower-than-geckodriver-on-the-first-page-query-through-sele
+# selenium Firefox permission denied
+# https://github.com/mozilla/geckodriver/issues/1408
+# https://nsinc.tistory.com/186
+# selenium webdrvier 사용법
+# https://l0o02.github.io/2018/06/12/python-crawling-selenium-1/
+# https://l0o02.github.io/2018/06/13/selenium-with-beautifulsoup-1/
+# selenium webdrvier로 facebook 로그인
+# https://l0o02.github.io/2018/06/12/python-crawling-selenium-2/
+# selenium webdriver 끄는 방식 close(), quit()
+# https://www.zyxware.com/articles/5552/what-is-close-and-quit-commands-in-selenium-webdriver
+# Selenium, Scrapy 연습 연재물
+# https://heodolf.tistory.com/5
 
 
 
+
+
+
+# 주의 사항 및 기타 알게 된 사항
+# Dataframe 각 column 등의 자료형을 바꿀 때 float64에서 int64로 가면 그냥 쉽게 될 줄 알았는데, 계속 오류가 나더라. 절대 하지 마라
+# 당연히 str으로 된 줄 알았는데, str()로 일일이 지정하지 않으면 안 되는 경우가 있더라
+# 자동으로 괄호 채워주는 게 편하긴 하지만, 종종 다른 코드들 끼워 넣을 때 잘못 작동해서 오류를 만드는 경우가 있다
+# 아마 Disqus처럼 디시인사이드도 댓글을 글과 따로 로드하는 것 같다
+# 그래서 최초 로딩에는 글만, 그리고 이후 잘 모르겠는 어떤 동작을 실제로 보여주면 그에 반응해서 댓글을 불러오는 것 같다
+# 이건 이따금 게시물 눌렀을 때, 댓글이 있음에도 불구하고 로딩이 안 된 경우들이 있었다는 것의 지지를 받는다
+
+
+# 단기 과제
+# 댓글 수집 함수 완성
+# 글 수집 함수 완성
+# 데이터 3법에 따른 가명 정보로의 가공 (공지 등의 제외 및 정렬은 당연히 포함)
+
+# 중장기 과제
+# 병렬화
+# 페이지 1000 이상 넘어가는 것들은 multiprocessing이든 스레딩이든 활용해서 속도를 매우 빠르게 할 것
+# selenium webdriver 사용하는 방식(댓글)에 대해서도 병렬 처리가 가능한지 확인할 것
+# selenium webdriver 는 폴더에 chromedriver 같은파일이 있어야 하는데,
+# 얘가 현재 브라우저 정보(크로뮴 엔진 번호 같은 거)에 맞는지 확인해서 아니면 새로운 것을 자동으로 다운 받아올 것
+
+# 해결된 과제
