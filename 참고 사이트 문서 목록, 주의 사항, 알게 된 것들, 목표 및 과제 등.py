@@ -252,11 +252,12 @@
 # https://wikidocs.net/1742
 # yield 와 callback
 # http://i5on9i.blogspot.com/2016/11/yield-callback.html
-
-
-
-
-
+# 에러 메시지 출력을 위한 데코레이터 활용
+# https://heodolf.tistory.com/47?category=897877
+# do not use bare 'except'
+# https://stackoverflow.com/questions/54948548/what-is-wrong-with-using-a-bare-except
+# 파이참 코드 초록색
+# https://greeksharifa.github.io/references/2019/02/07/PyCharm-usage/
 
 
 # 주의 사항 및 기타 알게 된 사항
@@ -274,8 +275,10 @@
 # 데이터 3법에 따른 가명 정보로의 가공 (공지 등의 제외 및 정렬은 당연히 포함)
 
 # 중장기 과제
-    # 1.0.4 버전까지만 BeautifulSoup을 주력으로 쓰고
-    # 1.1.0 버전부터는 아예 판을 갈아서 scrapy와 selenium 중심으로 갈 것이다
+# 1.0.4 버전까지만 BeautifulSoup을 주력으로 쓰고
+# 1.1.0 버전부터는 아예 판을 갈아서 scrapy와 selenium 중심으로 갈 것이다
+
+
 # 병렬화
 # 페이지 1000 이상 넘어가는 것들은 multiprocessing이든 스레딩이든 활용해서 속도를 매우 빠르게 할 것
 # selenium webdriver 사용하는 방식(댓글)에 대해서도 병렬 처리가 가능한지 확인할 것
