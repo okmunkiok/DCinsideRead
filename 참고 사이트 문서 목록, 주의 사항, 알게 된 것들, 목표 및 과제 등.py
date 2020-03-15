@@ -231,6 +231,28 @@
 # https://www.zyxware.com/articles/5552/what-is-close-and-quit-commands-in-selenium-webdriver
 # Selenium, Scrapy 연습 연재물
 # https://heodolf.tistory.com/5
+# 가변 인자 Variadic Parameters, Positional Argument *args, Keyword Argument Keyword Argument
+# https://heodolf.tistory.com/46?category=897877 
+# 내가 필요로 했던 바로 그 기능! 함수의 시작과 끝을 감싸줘서 에러 출력 같은 것들을 쉽게 해주는 것 데코레이터
+# https://heodolf.tistory.com/47?category=897877
+# [Selenium] Chrome에서 탭 여러개 사용하기
+# https://heodolf.tistory.com/48?category=897877
+# 크롤링으로 특가 상품 수집
+# https://heodolf.tistory.com/80?category=897877
+# scrapy 입문
+# https://engkimbs.tistory.com/893
+# https://engkimbs.tistory.com/897
+# pip list
+# https://zetawiki.com/wiki/Python_%EC%84%A4%EC%B9%98%EB%90%9C_%EB%AA%A8%EB%93%88_%EB%AA%A9%EB%A1%9D
+# scrapy crawl unknown command
+# https://stackoverflow.com/questions/10123104/unknown-command-crawl-error
+# XPATH practice
+# http://staff.washington.edu/tabrooks/343INFO/greaseMonkey/practiceXPath.htm
+# self
+# https://wikidocs.net/1742
+# yield 와 callback
+# http://i5on9i.blogspot.com/2016/11/yield-callback.html
+
 
 
 
@@ -252,6 +274,8 @@
 # 데이터 3법에 따른 가명 정보로의 가공 (공지 등의 제외 및 정렬은 당연히 포함)
 
 # 중장기 과제
+    # 1.0.4 버전까지만 BeautifulSoup을 주력으로 쓰고
+    # 1.1.0 버전부터는 아예 판을 갈아서 scrapy와 selenium 중심으로 갈 것이다
 # 병렬화
 # 페이지 1000 이상 넘어가는 것들은 multiprocessing이든 스레딩이든 활용해서 속도를 매우 빠르게 할 것
 # selenium webdriver 사용하는 방식(댓글)에 대해서도 병렬 처리가 가능한지 확인할 것
