@@ -10,3 +10,4 @@ html = driver.page_source
 soup = BeautifulSoup(html, "html.parser")
 print(time.time() - start_time)
 print("end")
+print("asdf")
