@@ -11,7 +11,7 @@ import numpy as np
 
 
 random.seed(time.time())
-request_iterate_limit = 1000
+request_iterate_limit = 10
 
 
 def print_log(func):
@@ -39,9 +39,9 @@ def get_bs_html_parsed(url, *args):
 
 @print_log
 def get_fake_header(header_length_max=10, *args):
-    header_length_min = 3
+    header_length_min = 10
     if header_length_max <= 0 or type(header_length_max != int):
-        header_length_max = header_length_min * 5
+        header_length_max = header_length_min * 3
     header_length = random.randint(header_length_min, header_length_max)
     header = ""
     for i in range(header_length):

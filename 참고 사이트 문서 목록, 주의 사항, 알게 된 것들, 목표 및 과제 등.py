@@ -40,8 +40,19 @@
 # https://ldgeao99.tistory.com/7
 # 워드 클라우드 만들기
 # https://imworld.tistory.com/entry/%EC%9B%8C%EB%93%9C-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EC%A3%BC%ED%94%BC%ED%84%B0%EB%85%B8%ED%8A%B8%EB%B6%81-%ED%8C%8C%EC%9D%B4%EC%8D%AC
+# https://konlpy-ko.readthedocs.io/ko/v0.4.3/examples/wordcloud/
+# https://thinkwarelab.wordpress.com/2016/08/30/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%98%95%ED%83%9C%EC%86%8C-%EB%B6%84%EC%84%9D%EC%9C%BC%EB%A1%9C-%EC%9B%8C%EB%93%9C%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EA%B7%B8%EB%A6%AC%EA%B8%B0/
+# https://myjamong.tistory.com/48
+# https://lovit.github.io/nlp/2018/04/17/word_cloud/
+# KoNLPy java vm 등 환경 설정
+# https://ellun.tistory.com/46
+# https://konlpy-ko.readthedocs.io/ko/v0.4.3/install/#id2
+# jpype 설치 오류
+# https://needjarvis.tistory.com/224
+# https://m.blog.naver.com/kiddwannabe/221795961189
 # Call by Reference
 # https://code13.tistory.com/214
+# https://stackoverflow.com/questions/986006/how-do-i-pass-a-variable-by-reference
 # Delete all data in dictionary
 # https://stackoverflow.com/questions/10446839/does-dictionarys-clear-method-delete-all-the-item-related-objects-from-memory
 # 시간 표기
@@ -258,6 +269,77 @@
 # https://stackoverflow.com/questions/54948548/what-is-wrong-with-using-a-bare-except
 # 파이참 코드 초록색
 # https://greeksharifa.github.io/references/2019/02/07/PyCharm-usage/
+# selenium headless
+# https://beomi.github.io/2017/09/28/HowToMakeWebCrawler-Headless-Chrome/
+# https://stackoverflow.com/questions/53118447/python-selenium-firefox-how-to-enable-headless-mode-as-part-of-a-class-object
+# https://stackoverflow.com/questions/46753393/how-to-make-firefox-headless-programmatically-in-selenium-with-python
+# xpath
+# https://l0o02.github.io/2018/06/13/selenium-with-beautifulsoup-1/
+# multiprocessing
+# https://niceman.tistory.com/145?category=940952
+# https://niceman.tistory.com/147
+# Thread
+# https://niceman.tistory.com/138?category=940952
+# pandas read_csv
+# https://rfriend.tistory.com/250
+# dataframe 정렬
+# https://rfriend.tistory.com/281
+# dataframe 특정 조건 삭제
+# https://creativeworks.tistory.com/entry/python-pandas-%EC%97%90%EC%84%9C-%ED%8A%B9%EC%A0%95-%EC%BB%AC%EB%9F%BC%EA%B0%92%EC%9D%98-row-%EB%A5%BC-%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0-Deleting-DataFrame-row-in-Pandas-based-on-column-value
+# pandas.Series.str.cat
+# https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.str.cat.html
+# string to txt file
+# http://blog.naver.com/PostView.nhn?blogId=yejoon3117&logNo=221058408177&beginTime=0&jumpingVid=&from=search&redirect=Log&widgetTypeCall=true
+# cp949
+# http://blog.naver.com/PostView.nhn?blogId=yejoon3117&logNo=221058408177&beginTime=0&jumpingVid=&from=search&redirect=Log&widgetTypeCall=true
+# multiprocessing multiple arguments
+# https://stackoverflow.com/questions/5442910/python-multiprocessing-pool-map-for-multiple-arguments
+# assert 개념과 쓰는 이유
+# https://wikidocs.net/21050
+# partial 개념
+# https://stackoverflow.com/questions/15331726/how-does-functools-partial-do-what-it-does
+# 왜 multiprocessing은 __main__에서만 호출이 되나
+# https://stackoverflow.com/questions/50781216/in-python-multiprocessing-process-do-we-have-to-use-name-main
+# multiprocessing without __main__
+# https://stackoverflow.com/questions/38958640/using-python-multiprocess-outside-the-main-script
+# dataframe to series, series to list
+# https://note.nkmk.me/en/python-pandas-list/
+# selenium webdriver get multiprocessing
+# https://stackoverflow.com/questions/14379218/selenium-and-multiprocessing-in-python
+# selenium webdriver not window but tab
+# https://m.blog.naver.com/PostView.nhn?blogId=kiddwannabe&logNo=221449593300&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+# selenium webdriver threading
+# https://gist.github.com/miraculixx/2f9549b79b451b522dde292c4a44177b
+# current year
+# https://stackoverflow.com/questions/28189442/datetime-current-year-and-month-in-python
+# selenium webdriver control
+# https://medium.com/@nsh235482/python-selenium%EC%9C%BC%EB%A1%9C-%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%ED%81%AC%EB%A1%A4%EB%A7%81%ED%95%98%EA%B8%B0-2-%EC%9B%B9-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%A0%9C%EC%96%B4%ED%95%B4%EB%B3%B4%EA%B8%B0-1ffc5e05179d
+# python selenium webdriver find element by tag
+# https://chercher.tech/python/webelement-locator
+# python selenium find element by xpath multiple attributes
+# https://stackoverflow.com/questions/47296843/selenium-finding-element-by-href
+# Check if a Python list item contains a string inside another string
+# https://stackoverflow.com/questions/4843158/check-if-a-python-list-item-contains-a-string-inside-another-string
+# pandas get column name
+# https://www.geeksforgeeks.org/how-to-get-column-names-in-pandas-dataframe/
+# python merge list to string
+# https://stackoverflow.com/questions/12453580/concatenate-item-in-list-to-strings
+# set add() in python
+# https://www.geeksforgeeks.org/set-add-python/
+# python concat set
+# https://stackoverflow.com/questions/17429123/how-to-join-two-sets-in-one-line-without-using
+# BeautifulSoup4 - python: how to merge two bs4.element.ResultSet and get one single list?
+# https://stackoverflow.com/questions/26717943/beautifulsoup4-python-how-to-merge-two-bs4-element-resultset-and-get-one-sing
+# pandas string concat warning
+# https://stackoverflow.com/questions/50501787/python-pandas-user-warning-sorting-because-non-concatenation-axis-is-not-aligne
+# https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+# pandas SettingWithCopyWarning
+# https://www.dataquest.io/blog/settingwithcopywarning/
+# SettingWithCopyWarning:A value is trying to be set on a copy of a slice from a DataFrame
+# https://stackoverflow.com/questions/49728421/pandas-dataframe-settingwithcopywarning-a-value-is-trying-to-be-set-on-a-copy
+# pandas values min max
+# https://www.w3resource.com/pandas/series/series-min.php
+# https://www.w3resource.com/pandas/series/series-max.php
 
 
 # 주의 사항 및 기타 알게 된 사항
